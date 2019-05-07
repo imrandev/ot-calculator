@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".main.MainActivity"
+    android:padding="16dp">
+    
+    <EditText
+        android:id="@+id/t_start_time"
+        android:hint="Trip start time (Ex. 2019-01-01 00:00:00)"
+        android:inputType="datetime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"/>
+
+    <EditText
+        android:id="@+id/t_end_time"
+        android:hint="Trip end time (Ex. 2019-01-01 00:00:00)"
+        android:inputType="datetime"
+        android:layout_below="@+id/t_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"/>
+
+    <Button
+        android:layout_below="@+id/t_end_time"
+        android:id="@+id/overtime_get"
+        android:layout_width="match_parent"
+        android:text="Calculate Overtime"
+        android:layout_height="wrap_content"
+        android:onClick="onCalculate"/>
+
+    <TextView
+        android:id="@+id/ov_result"
+        android:gravity="center"
+        android:layout_below="@+id/overtime_get"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
+
+</RelativeLayout>
